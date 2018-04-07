@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <vue-embed-gist />
+    <vue-embed-gist gist-id="8bab656a910829ab9c32d7700c570be6"/>
   </div>
 </template>
 
