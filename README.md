@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/vue-embed-gist.svg?style=flat)](https://npmjs.com/package/vue-embed-gist) [![NPM downloads](https://img.shields.io/npm/dm/vue-embed-gist.svg?style=flat)](https://npmjs.com/package/vue-embed-gist) [![CircleCI](https://circleci.com/gh/sudhanshu-15/vue-embed-gist/tree/master.svg?style=shield)](https://circleci.com/gh/sudhanshu-15/vue-embed-gist/tree/master)
 
-Vue component to embed Github Gists, inspired by Blair Vanderhoof's gist-embed.
+Vue component to embed Github Gists, inspired by Blair Vanderhoof's gist-embed. (https://github.com/blairvanderhoof/gist-embed)
 
 ## Install
 
@@ -20,7 +20,9 @@ npm install --save vue-embed-gist
 
 ```vue
 <template>
-  <vue-embed-gist></vue-embed-gist>
+  <vue-embed-gist 
+      gist-id="your gist id -- required" 
+      file="your file name -- optional"/>
 </template>
 
 <script>
