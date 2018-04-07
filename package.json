@@ -1,0 +1,48 @@
+{
+  "name": "vue-embed-gist",
+  "version": "0.0.0",
+  "description": "Vue component to embed Github Gists, inspired by Blair Vanderhoof&#39;s gist-embed.",
+  "repository": {
+    "url": "sudhanshu-15/vue-embed-gist",
+    "type": "git"
+  },
+  "main": "dist/vue-embed-gist.cjs.js",
+  "files": ["dist"],
+  "scripts": {
+    "prepublishOnly": "npm test && npm run build",
+    "lint": "eslint . --ext .js --ext .vue",
+    "test": "npm run lint && tyu",
+    "build": "bili",
+    "example": "poi",
+    "build:example": "poi build"
+  },
+  "author": {
+    "name": "Sudhanshu Siddh",
+    "email": "sudhanshu.15@gmail.com"
+  },
+  "license": "MIT",
+  "poi": {
+    "entry": "example/index.js",
+    "dist": "example/dist",
+    "homepage": "./"
+  },
+  "bili": {
+    "format": ["cjs", "umd"],
+    "name": "vue-embed-gist",
+    "plugins": ["vue"]
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:vue/recommended"
+    ]
+  },
+  "devDependencies": {
+    "poi": "^9.3.10",
+    "bili": "^1.3.3",
+    "tyu": "^1.0.0",
+    "vue-test-utils": "^1.0.0-beta.9",
+    "rollup-plugin-vue": "^2.5.2",
+    "eslint": "^4.14.0",
+    "eslint-plugin-vue": "^4.0.1"
+  }
+}
