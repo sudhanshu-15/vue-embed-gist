@@ -7,7 +7,9 @@
     "type": "git"
   },
   "main": "dist/vue-embed-gist.cjs.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepublishOnly": "npm test && npm run build",
     "lint": "eslint . --ext .js --ext .vue",
@@ -27,9 +29,14 @@
     "homepage": "./"
   },
   "bili": {
-    "format": ["cjs", "umd"],
+    "format": [
+      "cjs",
+      "umd"
+    ],
     "name": "vue-embed-gist",
-    "plugins": ["vue"]
+    "plugins": [
+      "vue"
+    ]
   },
   "eslintConfig": {
     "extends": [
