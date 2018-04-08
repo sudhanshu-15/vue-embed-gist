@@ -21,8 +21,8 @@ npm install --save vue-embed-gist
 ```vue
 <template>
   <vue-embed-gist 
-      gist-id="your gist id -- required" 
-      file="your file name -- optional"/>
+      gist-id="your gist id" 
+      file="your file name"/>
 </template>
 
 <script>
@@ -35,6 +35,20 @@ export default {
 }
 </script>
 ```
+
+### Props
+
+#### gist-Id
+**Type:** `String`
+**Required:** `true`
+
+:octocat: Github gist Id
+
+#### file
+**Type:** `String`
+**Required:** `false` 
+
+File name in the gist
 
 ## License
 
