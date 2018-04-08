@@ -47,12 +47,18 @@ workflows:
   version: 2
   build-and-publish:
     jobs:
-      - build
-      - publish:
-          requires:
-            - build
+      - build:
           filters:
             branches:
-              only: master
+              ignore:
+                - master
+      - hold:
+          type: approval
+      - publish:
+          requires:
+            - hold
+          filters:
+            branches:
+              ignore: /.*/
             tags:
               only: /v[0-9]+(\.[0-9]+)*/
