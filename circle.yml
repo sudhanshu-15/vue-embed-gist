@@ -48,6 +48,9 @@ workflows:
   build-and-publish:
     jobs:
       - build:
+          filters:
+            tags:
+              ignore: /v[0-9]+(\.[0-9]+)*/
       - publish:
           filters:
             branches:
