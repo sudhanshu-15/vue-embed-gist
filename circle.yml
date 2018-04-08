@@ -52,11 +52,7 @@ workflows:
             branches:
               ignore:
                 - master
-      - hold:
-          type: approval
       - publish:
-          requires:
-            - hold
           filters:
             branches:
               ignore: /.*/
