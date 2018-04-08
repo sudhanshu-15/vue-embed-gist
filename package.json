@@ -6,6 +6,12 @@
     "url": "sudhanshu-15/vue-embed-gist",
     "type": "git"
   },
+  "keywords": [
+    "vue",
+    "gist",
+    "embed",
+    "component"
+  ],
   "main": "dist/vue-embed-gist.cjs.js",
   "files": [
     "dist"
