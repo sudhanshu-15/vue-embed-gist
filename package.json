@@ -1,6 +1,6 @@
 {
   "name": "vue-embed-gist",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Vue component to embed Github Gists, inspired by Blair Vanderhoof&#39;s gist-embed.",
   "repository": {
     "url": "sudhanshu-15/vue-embed-gist",
