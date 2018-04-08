@@ -23,6 +23,8 @@ jobs:
           command: npm run build
   deploy:
     working_directory: ~/repo
+    docker:
+      - image: circleci/node:latest
     steps:
       - checkout
       - run:
