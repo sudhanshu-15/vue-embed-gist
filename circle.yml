@@ -48,10 +48,6 @@ workflows:
   build-and-publish:
     jobs:
       - build:
-          filters:
-            branches:
-              ignore:
-                - master
       - publish:
           filters:
             branches:
