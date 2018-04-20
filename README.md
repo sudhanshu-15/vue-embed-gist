@@ -4,6 +4,9 @@
 
 Vue component to embed Github Gists, inspired by Blair Vanderhoof's gist-embed. (https://github.com/blairvanderhoof/gist-embed)
 
+## Demo
+[Demo of vue-embed-gist](https://sudhanshu-15.github.io/vue-embed-gist)
+
 ## Install
 
 ```bash

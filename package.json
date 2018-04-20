@@ -22,7 +22,8 @@
     "test": "npm run lint && tyu",
     "build": "bili",
     "example": "poi",
-    "build:example": "poi build"
+    "build:example": "poi build",
+    "deploy": "npm run build:example && gh-pages -d example/dist"
   },
   "author": {
     "name": "Sudhanshu Siddh",
@@ -64,6 +65,7 @@
     "bili": "^1.6.5",
     "eslint": "^4.14.0",
     "eslint-plugin-vue": "^4.0.1",
+    "gh-pages": "^1.1.0",
     "poi": "^9.3.10",
     "rollup-plugin-vue": "^2.5.2",
     "tyu": "^1.0.0",
