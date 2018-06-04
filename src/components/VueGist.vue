@@ -5,57 +5,54 @@
 </template>
 
 <script>
-var gistUrl = 'https://gist.github.com/'
-var data = {}
+var gistUrl = "https://gist.github.com/";
+var data = {};
 
-import VueGistCore from './VueGistCore.vue'
-import $ from 'jquery'
+import VueGistCore from "./VueGistCore.vue";
+import jsonp from 'jsonp';
+
 export default {
   components: {
-      appGistCore: VueGistCore,
+    appGistCore: VueGistCore
   },
   props: {
-      gistId: {
-          type: String,
-          required: true
-      },
-      file: {
-          type: String,
-          required: false,
-          default: ''
-      }
+    gistId: {
+      type: String,
+      required: true
+    },
+    file: {
+      type: String,
+      required: false,
+      default: ""
+    }
   },
   data() {
-      return {
-          gistData: 'loading...',
-      }
+    return {
+      gistData: "loading..."
+    };
   },
-  created () {
-      this.getGistData(this.gistId)
+  created() {
+    this.getGistData(this.gistId);
   },
   methods: {
-      getGistData (gistId) {
-          var self = this;
-          if(this.file.length > 0){
-              data.file = this.file;
-          } 
-          $.ajax({
-              url: gistUrl + gistId + '.json',
-              data: data,
-              dataType: 'jsonp',
-              timeout: 20000,
-              success: function(response) {
-                  self.gistData = response.div;
-              },
-              error: function(response) {
-                  console.log("error")
-              }
-          });
+    getGistData(gistId) {
+      var self = this;
+      if (this.file.length > 0) {
+        data.file = this.file;
       }
-  },
-}
+
+    jsonp(gistUrl + gistId + ".json", data, (err, response) => {
+    if (err) {
+        console.error(err.message);
+    } else {
+        self.gistData = response.div;
+    }
+    });
+    }
+  }
+};
 </script>
 
 <style scoped>
-@import url('https://assets-cdn.github.com/assets/gist-embed-1baaff35daab552f019ad459494450f1.css');
+@import url("https://assets-cdn.github.com/assets/gist-embed-1baaff35daab552f019ad459494450f1.css");
 </style>
