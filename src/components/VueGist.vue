@@ -5,11 +5,9 @@
 </template>
 
 <script>
-var gistUrl = "https://gist.github.com/";
-var data = {};
-
 import VueGistCore from "./VueGistCore.vue";
-import $ from "jquery";
+import jsonp from 'jsonp';
+
 export default {
   components: {
     appGistCore: VueGistCore
@@ -27,30 +25,36 @@ export default {
   },
   data() {
     return {
-      gistData: "loading..."
+      gistData: "loading...",
+      gistUrl: "https://gist.github.com/"
     };
   },
-  created() {
+  computed: {
+    url() {
+      return `${this.gistUrl}${this.gistId}.json`
+    },
+    params() {
+      if (this.file.length > 0) {
+        return `file=${this.file}`;
+      }
+      return ''
+    },
+    fullUrl(){
+      return `${this.url}?${this.params}`
+    }
+  },
+    created() {
     this.getGistData(this.gistId);
   },
   methods: {
     getGistData(gistId) {
-      var self = this;
-      if (this.file.length > 0) {
-        data.file = this.file;
-      }
-      $.ajax({
-        url: gistUrl + gistId + ".json",
-        data: data,
-        dataType: "jsonp",
-        timeout: 20000,
-        success: function(response) {
-          self.gistData = response.div;
-        },
-        error: function(response) {
-          console.log("error");
+      jsonp(this.fullUrl,{ timeout: 20000 }, (err, response) => {
+        if (err) {
+            console.error(err.message);
+            return
         }
-      });
+          this.gistData = response.div;
+        })
     }
   }
 };

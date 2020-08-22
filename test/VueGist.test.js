@@ -6,7 +6,7 @@
 import { mount, shallow } from 'vue-test-utils'
 import VueGist from '../src/components/VueGist.vue'
 import VueGistCore from '../src/components/VueGistCore.vue'
-import $ from './__mocks__/jquery'
+import jsonp from './__mocks__/jsonp'
 
 describe('VueGist Component', () => {
   test('is a Vue instance', () => {
@@ -75,15 +75,10 @@ describe('VueGist Component', () => {
         }
     })
     wrapper.vm.getGistData('gistId')
-    expect($.ajax).toBeCalledWith({
-      data: {
-        file: 'test.java'
-      },
-      dataType: 'jsonp',
-      error: expect.any(Function),
-      success: expect.any(Function),
-      timeout: 20000,
-      url: 'https://gist.github.com/gistId.json'
-    })
+    expect(jsonp).toBeCalledWith(
+      'https://gist.github.com/gistId.json?file=test.java',
+      { timeout: 20000 },
+      expect.any(Function)
+    )
   })
 })
