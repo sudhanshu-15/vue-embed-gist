@@ -57,6 +57,8 @@ export default {
 
 File name in the gist
 
+## [Code of conduct](CODE_OF_CONDUCT.md)
+
 ## License
 
 MIT &copy; [Sudhanshu Siddh](www.ssiddh.me)
