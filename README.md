@@ -57,6 +57,8 @@ export default {
 
 File name in the gist
 
+## [Contributing to this project 🙌🏽](CONTRIBUTING.md)
+
 ## [Code of conduct](CODE_OF_CONDUCT.md)
 
 ## License
