@@ -1,10 +1,12 @@
 # vue-embed-gist
 
 [![NPM version](https://img.shields.io/npm/v/vue-embed-gist.svg?style=flat)](https://npmjs.com/package/vue-embed-gist) [![NPM downloads](https://img.shields.io/npm/dm/vue-embed-gist.svg?style=flat)](https://npmjs.com/package/vue-embed-gist) [![CircleCI](https://circleci.com/gh/sudhanshu-15/vue-embed-gist/tree/master.svg?style=shield)](https://circleci.com/gh/sudhanshu-15/vue-embed-gist/tree/master)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 Vue component to embed Github Gists, inspired by Blair Vanderhoof's gist-embed. (https://github.com/blairvanderhoof/gist-embed)
 
 ## Demo
+
 [Demo of vue-embed-gist](https://sudhanshu-15.github.io/vue-embed-gist)
 
 ## Install
@@ -12,7 +14,9 @@ Vue component to embed Github Gists, inspired by Blair Vanderhoof's gist-embed. 
 ```bash
 yarn add vue-embed-gist
 ```
+
 or
+
 ```bash
 npm install --save vue-embed-gist
 ```
@@ -23,35 +27,37 @@ npm install --save vue-embed-gist
 
 ```vue
 <template>
-  <vue-embed-gist 
-      gist-id="your gist id" 
-      file="your file name"/>
+  <vue-embed-gist gist-id="your gist id" file="your file name" />
 </template>
 
 <script>
-import VueEmbedGist from 'vue-embed-gist'
+import VueEmbedGist from "vue-embed-gist";
 
 export default {
   components: {
-    VueEmbedGist
-  }
-}
+    VueEmbedGist,
+  },
+};
 </script>
 ```
 
 ### Props
 
 #### gist-Id
+
 **Type:** `String`
 **Required:** `true`
 
 :octocat: Github gist Id
 
 #### file
+
 **Type:** `String`
-**Required:** `false` 
+**Required:** `false`
 
 File name in the gist
+
+## [Code of conduct](CODE_OF_CONDUCT.md)
 
 ## License
 
