@@ -1,13 +1,13 @@
 ## How to contribute
 
-First of all thank you so much for using this plugin in your project, secondly I really appreciate you taking the initiative to consider contributing to this project. One of the fundamental goals of this project was to promote learning and if this is your first time contributing you are very welcome here and I hope it fun and exciting for you.
+First of all, thank you so much for using this plugin in your project secondly, I really appreciate you taking the initiative to consider contributing to this project. One of the fundamental goals of this project was to promote learning and if this is your first time contributing you are very welcome here and I hope it fun and exciting for you.
 
 Some general technical overview to get you started and help understand the project better. 
 PS: This is also for me to refer later 🙈
 
 This project uses:
 - [bili](https://bili.egoist.sh/#/) for bundling the library. It is simple and easy to use.
-- Eslint for linting
+- ESlint for linting
 - Jest for testing
 - All source code resides in `src/`
   - To validate your changes run `npm run prepublishOnly`. This will run the test suite and also try to build the project. 😉 it might be wise to update the test cases in `test/`. 
