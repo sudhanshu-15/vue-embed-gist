@@ -43,7 +43,16 @@ export default {
       return `${this.url}?${this.params}`
     }
   },
-    created() {
+  watch: {
+    gistId: {
+      handler: function () {
+        this.$data.gistData = "loading...";
+        this.getGistData();
+      },
+      deep: true,
+    },
+  },
+  created() {
     this.getGistData(this.gistId);
   },
   methods: {
