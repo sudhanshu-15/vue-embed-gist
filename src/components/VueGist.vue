@@ -31,8 +31,7 @@ export default {
   },
   watch: {
     gistId: {
-      handler: function (newVal, oldVal) {
-        console.log("Prop changed : ", newVal, " | was: ", oldVal);
+      handler: function () {
         this.$data.gistData = "loading...";
         this.getGistData();
       },
