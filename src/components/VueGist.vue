@@ -29,6 +29,16 @@ export default {
       gistUrl: "https://gist.github.com/"
     };
   },
+  watch: {
+    gistId: {
+      handler: function (newVal, oldVal) {
+        console.log("Prop changed : ", newVal, " | was: ", oldVal);
+        this.$data.gistData = "loading...";
+        this.getGistData();
+      },
+      deep: true,
+    },
+  },
   computed: {
     url() {
       return `${this.gistUrl}${this.gistId}.json`
