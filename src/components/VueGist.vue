@@ -49,14 +49,12 @@ export default {
         this.$data.gistData = "loading...";
         this.getGistData();
       },
+      immediate:true,
       deep: true,
     },
   },
-  created() {
-    this.getGistData(this.gistId);
-  },
   methods: {
-    getGistData(gistId) {
+    getGistData() {
       jsonp(this.fullUrl,{ timeout: 20000 }, (err, response) => {
         if (err) {
             console.error(err.message);
