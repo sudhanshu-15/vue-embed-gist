@@ -55,7 +55,13 @@ export default {
 **Type:** `String`
 **Required:** `false`
 
-File name in the gist
+To customize the error message when the request to the gist fails.
+
+### Slots
+
+#### error
+
+To customize the HTML of the error when 
 
 ## [Contributing to this project 🙌🏽](CONTRIBUTING.md)
 

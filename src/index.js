@@ -17,6 +17,7 @@ export default {
         gistId: this.gistId,
         file: this.file
       }
-    })
+    },
+    [this.$slots.error])
   }
 }
