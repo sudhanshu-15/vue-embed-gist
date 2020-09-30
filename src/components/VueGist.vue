@@ -4,7 +4,7 @@
       v-if="!gistError"
       :gist-div="gistData"
     />
-    <slot v-if="gistError">
+    <slot v-else>
       <p class="gist-error">Error fetching the gist</p>
     </slot>
   </div>
@@ -58,6 +58,7 @@ export default {
       jsonp(this.fullUrl, { timeout: 20000 }, (err, response) => {
         if (err) {
           this.gistError = true;
+          console.log(err);
           return;
         }
         this.gistData = response.div;
