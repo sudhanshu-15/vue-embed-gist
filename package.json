@@ -63,6 +63,8 @@
   "devDependencies": {
     "@babel/helper-module-imports": "^7.0.0-beta.44",
     "bili": "^1.6.5",
+    "danger": "^10.5.0",
+    "danger-plugin-spellcheck": "^1.5.0",
     "eslint": "^4.14.0",
     "eslint-plugin-vue": "^4.0.1",
     "gh-pages": "^1.1.0",
