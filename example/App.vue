@@ -32,7 +32,7 @@
     </button>
     <vue-embed-gist 
       :gist-id="gistIdValue"/>
-
+    <br>
     <h3>Error Component</h3>
     <vue-embed-gist 
       :gist-id="gistIdValue"
