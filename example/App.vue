@@ -32,6 +32,11 @@
     </button>
     <vue-embed-gist 
       :gist-id="gistIdValue"/>
+
+    <h3>Error Component</h3>
+    <vue-embed-gist 
+      :gist-id="gistIdValue"
+      file="index.js"/>
     
   </div>
 </template>

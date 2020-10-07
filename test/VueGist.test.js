@@ -67,6 +67,18 @@ describe('VueGist Component', () => {
     expect(wrapper.vm.gistData).toBe('loading...')
   })
 
+  test('Show Error component', () =>{
+    const wrapper = shallow(VueGist, {
+      propsData: {
+        gistId: '8bab656a910829ab9c32d7700c570be6',
+        file: 'index.js'
+      }
+    })
+    wrapper.setData({ gistErr: true})
+    // looking for the css selector
+    expect(wrapper.find(".alert")).toBeTruthy()
+  })
+
   test('Dynamically change the gist after the instance created', () => {
     const wrapper = shallow(VueGist, {
       propsData: {
