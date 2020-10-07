@@ -1,7 +1,7 @@
 <template>
   <div>
     <template v-if="gistErr">
-      <div class="alert alert-danger" role="alert">
+      <div class="alert alert-danger">
         <i class="material-icons">error</i>
         Oops! We hit a block, Please check the gist-id/filename.
       </div>
