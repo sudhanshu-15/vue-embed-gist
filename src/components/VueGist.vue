@@ -6,7 +6,7 @@
 
 <script>
 import VueGistCore from "./VueGistCore.vue";
-import jsonp from 'jsonp';
+import jsonp from "jsonp";
 
 export default {
   components: {
