@@ -76,7 +76,7 @@ describe('VueGist Component', () => {
     })
     wrapper.setData({ gistErr: true})
     // looking for the css selector
-    expect(wrapper.find(".alert")).toBeTruthy()
+    expect(wrapper.find("#notFound")).toBeTruthy()
   })
 
   test('Dynamically change the gist after the instance created', () => {
